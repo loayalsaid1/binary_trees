@@ -27,15 +27,19 @@ def depth_first_print(root):
 
 print(depth_first_print(a))
 
-def delete_tree(root):
-    if root == None:
-        return
-    delete_tree(root.left)
-    delete_tree(root.right)
-    root.val = "delted"
-delete_tree(a)
 
-try:
-    print(depth_first_print(a))
-except:
-    print("Exception")
+
+def height(root):
+    """get the height or a tree"""
+    if root is None or (root.left is None and root.right is None):
+        return 0
+    
+    left_height = height(root.left)
+    right_height = height(root.right)
+
+    if left_height >= right_height:
+        return left_height + 1
+    else:
+        return right_height + 1
+
+print(height(d))
