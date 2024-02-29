@@ -26,3 +26,12 @@ def depth_first_print(root):
 
 
 print(depth_first_print(a))
+
+def delete_tree(root):
+    if root == None:
+        return
+    delete_tree(root.left)
+    delete_tree(root.right)
+    root.val = "delted"
+delete_tree(a)
+print(depth_first_print(a))
