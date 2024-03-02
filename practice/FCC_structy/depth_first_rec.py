@@ -39,3 +39,4 @@ try:
     print(depth_first_print(a))
 except:
     print("Exception")
+

@@ -2,6 +2,8 @@ CC= gcc
 CFLAGS=-Wall -Wextra -Werror -pedantic
 
 
-%: %.c 
-	$(CC) $(CFLAGS) $^ -o $@
-	@echo
+all: queue
+
+queue:
+	gcc queue.c -o q
+	./q
